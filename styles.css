@@ -133,11 +133,10 @@ header img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 35px;
     transition: all 0.4s ease-in-out; 
     background-color: #f7f7f7; 
     border-radius: 10px;
-    padding: 5px;
+    padding: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
     border: 1px solid #eee; 
 }
@@ -154,7 +153,6 @@ header img {
 /* ------------------------------------------------------------------- */
 
 #intro ol .food_item li {
-    font-size: x-large;
     font-weight: bold;
     color: #333;
     position: relative; 
@@ -164,7 +162,7 @@ header img {
 }
 
 #intro ol .food_item li::after {
-    content: '';
+    content:'';
     position: absolute;
     bottom: 0;
     left: 0;
