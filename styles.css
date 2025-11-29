@@ -971,6 +971,8 @@ footer .footer-bottom {
 /* 480px and below - Most phones */
 @media (max-width: 480px) {
     footer{
+        margin-top: 20px;
+
         width: 95%;
     }
     footer .footer-content {
@@ -996,5 +998,6 @@ footer .footer-bottom {
         width: 80%;
         line-height: 2;
         padding: 5%;
+        margin: auto;
     }
 }
