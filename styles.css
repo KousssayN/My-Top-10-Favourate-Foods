@@ -1,6 +1,8 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; 
 }
 
 /*Start of header Part*/
@@ -12,6 +14,7 @@ header {
     align-items: center;
     border-radius: 0 0 6px 6px;
     max-width: 100%;
+    border-bottom: 3px solid #ff7300; 
 }
 
 header nav {
@@ -22,20 +25,26 @@ header nav {
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
 }
-
+header nav ul li a{
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.5s; 
+    color: #ff7300; 
+}
 header nav ul li {
     font-size: 30px;
     text-align: center;
     list-style: none;
-    transition: 1s;
-    color: rgb(255, 102, 0);
-
+    transition: 0.5s; 
+    color: #ff7300; 
 }
 
-header nav ul li:hover {
-    color: yellow;
+header nav ul li a:hover {
+    color: #ffb700; 
     cursor: pointer;
     scale: 1.1;
+    text-shadow: 0 0 10px #ff7300; 
 }
 
 header h1 {
@@ -44,9 +53,10 @@ header h1 {
     color: transparent;
     font-style: italic;
     font-size: 50px;
-    background: linear-gradient(90deg, #FFD27F 0%, #FFB35C 25%, #FF7A59 50%, #D9482B 75%, #8B3E2F 100%);
+    background: linear-gradient(90deg, #ffdcb0 0%, #ff9f43 25%, #ff7300 50%, #d35400 75%, #a13200 100%);
     background-size: 200% 100%;
     background-clip: text;
+    -webkit-background-clip: text; 
     animation: slide-gradient 4.5s linear infinite;
 }
 
@@ -54,6 +64,7 @@ header img {
     width: 300px;
     border-radius: 12px;
     margin: 3px;
+    border: 2px solid #ff7300; 
 }
 
 @media (max-width: 720px) {
@@ -84,7 +95,7 @@ header img {
 
     header nav ul li {
         font-size: larger;
-        color: #941111;
+        color: #ff7300; 
     }
 }
 
@@ -118,6 +129,80 @@ header img {
 
 
 /*Start of fisrt section*/
+#intro ol .food_item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    transition: all 0.4s ease-in-out; 
+    background-color: #f7f7f7; 
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    border: 1px solid #eee; 
+}
+
+#intro ol .food_item:hover {
+    box-shadow: 
+        0 8px 15px rgba(255, 115, 0, 0.35), 
+        0 0 0 3px #ff7300; 
+    transform: translate(1px, 1px); 
+    background-color: #fff8f5; 
+    cursor: pointer;
+}
+
+/* ------------------------------------------------------------------- */
+
+#intro ol .food_item li {
+    font-size: x-large;
+    font-weight: bold;
+    color: #333;
+    position: relative; 
+    display: inline-block;
+    padding-bottom: 5px; 
+    overflow: hidden; 
+}
+
+#intro ol .food_item li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px; 
+    background-color: #ff7300; 
+    transform: translateX(-100%); 
+    transition: transform 0.3s ease-out;
+}
+
+/* Animate the underline on parent hover */
+#intro ol .food_item:hover li::after {
+    transform: translateX(0); 
+}
+
+/* ------------------------------------------------------------------- */
+
+#intro ol .food_item img {
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    object-fit: cover;
+    transition: filter 0.5s ease, transform 0.5s ease;
+    filter: grayscale(10%); 
+}
+
+#intro ol .food_item:hover img {
+    transform: scale(1.08); 
+    filter: grayscale(0%) brightness(1.05); 
+    border-color: #ff7300; 
+    box-shadow: 0 0 5px rgba(255, 115, 0, 0.5); 
+}
+#intro ol a {
+    text-decoration: none; 
+    display: contents; 
+}
+
 #intro {
     width: 95%;
     margin: auto;
@@ -127,8 +212,9 @@ h2 {
     text-align: center;
     align-items: center;
     font-size: 35px;
-    color: #bb6707;
+    color: #d35400; 
     padding: 5%;
+    text-transform: uppercase; 
 }
 
 #intro p {
@@ -136,6 +222,7 @@ h2 {
     margin: auto;
     font-size: 30px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #333; 
 }
 
 #intro ol {
@@ -148,7 +235,7 @@ h2 {
     width: 70%;
     line-height: 6;
     margin: auto;
-
+    color: #bc4600; 
 }
 
 #intro ol .food_item {
@@ -157,19 +244,19 @@ h2 {
     justify-content: space-between;
     gap: 35px;
     margin: 10px;
-
 }
-
-
 
 #intro ol .food_item img {
     width: 200px;
     height: 150px;
     border-radius: 10px;
-    border: 1px solid black;
+    border: 2px solid #ff7300; 
     object-fit: cover;
+    box-shadow: 0 4px 8px rgba(255, 115, 0, 0.2); 
 }
-
+/* ============================
+    RESPONSIVE BREAKPOINTS
+    ============================ */
 /* Tablets and Medium screens (769px - 1024px) */
 @media (max-width: 1024px) {
     #intro p {
@@ -334,7 +421,6 @@ h2 {
     margin-top: 5%;
     margin-bottom: 5%;
     line-height:2;
-
 }
 
 #rank .div_rank_number {
@@ -345,16 +431,16 @@ h2 {
 #rank .div_rank_number h4{
     font-size: xx-large;
     font-family: Arial, Helvetica, sans-serif;
-    color: #a50000;
-
+    color: #ff4500; 
 }
 #rank .div_rank_number h3 {
-    background-color: #ff73004b;
+    background-color: #ff73001a; 
     padding: 20px;
-    color: rgb(0, 21, 39);
+    color: #2d2d2d;
     margin: 10px;
-    border: #866200 4px solid;
+    border: #ff7300 3px solid; 
     border-radius: 10px;
+    box-shadow: 2px 2px 10px #ff730033; 
 }
 
 
@@ -362,14 +448,16 @@ h2 {
     display: flex;
     justify-content: space-around;
 }
-#rank  img {
-   width: 31%;
-   height: 350px;
-   border-radius: 10px;
-   transition: 0.5s;
+#rank  img {
+    width: 31%;
+    height: 350px;
+    border-radius: 10px;
+    transition: 0.5s;
+    border: 1px solid #ffe0b2; 
 }
-#rank  img:hover {
+#rank  img:hover {
     scale: 1.05;
+    box-shadow: 0 5px 15px rgba(255, 115, 0, 0.4); 
 }
 #rank .div_rank_recipe details{
     margin-top: 1%;
@@ -377,21 +465,21 @@ h2 {
     transition: ease 1s;
 }
 #rank .div_rank_recipe details ol{
-margin-left: 3%;
+    margin-left: 3%;
 }
 #rank .div_rank_recipe details summary{
     font-size: x-large;
     font-weight: bolder;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #07b5bb;
+    color: #d35400; 
     cursor: pointer;
     transition: 0.4s;
+    outline: none;
 }
 #rank .div_rank_recipe details ol>li{
-    color: blue;
+    color: #4a4a4a; 
     font-size: x-large;
     font-family: 'Courier New', Courier, monospace;
-
 }
 #rank .div_rank_recipe details ol ul>ul{
     margin-left: 4%;
@@ -399,10 +487,11 @@ margin-left: 3%;
 #rank .div_rank_recipe details ol ul li{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size: large;
+    color: #666; 
 
 }
 #rank .div_rank_recipe details summary:hover{
-    color: #ff5722;
+    color: #ff7300; 
     padding-top: 5px;
     padding-bottom: 5px;
     
@@ -412,13 +501,18 @@ margin-left: 3%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-top: 10px;
     margin-bottom: 20px;
+    color: #333;
 }
 #rank .div_rank_recipe details iframe{
     width: 90%;
     height: 500px;
     margin : 30px ;
     border-radius: 20px;
+    border: 4px solid #ff7300; 
 }
+/* ============================
+    RESPONSIVE BREAKPOINTS
+    ============================ */
 
 /* Tablets and Medium screens (769px - 1024px) */
 @media (max-width: 1024px) {
@@ -463,7 +557,7 @@ margin-left: 3%;
 }
 
 /* Tablets (721px - 768px) */
-@media (max-width: 768px) {
+@media (max-width: 770px) {
     #rank {
         width: 90%;
         margin-top: 3%;
@@ -677,6 +771,8 @@ margin-left: 3%;
     #rank .div_rank_recipe details {
         margin-left: 0%;
         margin-top: 1%;
+        width: 90%;
+        margin: auto;
     }
 
     #rank .div_rank_recipe details summary {
@@ -703,5 +799,204 @@ margin-left: 3%;
         width: 100%;
         height: 200px;
         margin: 5px 0;
+    }
+}
+
+/*Start of footer*/
+footer {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: #f0f0f0;
+    padding: 20px 10px 10px;
+    margin-top: 60px;
+    border-top: 3px solid #ff7300;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 20px 20px 0px 0px;
+}
+
+footer .footer-content {
+    margin: 0 auto;
+    display: grid;
+    width: 65%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px ;
+}
+
+footer .footer-section {
+    padding: 20px;
+}
+
+footer .footer-section h3 {
+    color: #ff7300;
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #ff7300;
+    padding-bottom: 10px;
+}
+
+footer .footer-section p {
+    line-height:2;
+    font-size: 14px;
+    color: #d0d0d0;
+}
+
+footer .footer-section ul {
+    list-style: none;
+}
+
+footer .footer-section ul li  {
+    margin: 10px 0;
+}
+
+footer .footer-section a {
+    color: #ff7300;
+    text-decoration: none;
+    transition: 0.3s ease;
+    font-weight: 500;
+}
+
+footer .footer-section a:hover {
+    color: #ffa500;
+    text-decoration: underline;
+}
+
+footer .footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid #444;
+    border-bottom: 1px solid #444;
+    color: #999;
+    font-size: 14px;
+}
+
+/*End of footer*/
+
+/* Start of Opinion */
+#opinion p{
+    padding: 3%;
+    background-color: rgba(255, 115, 0, 0.05); 
+    border-radius: 20px;
+    box-shadow: 4px 2px 20px rgba(255, 69, 0, 0.3);
+    border: 1px solid #ffe0b2;
+    font-size: x-large;
+    width: 70%;
+    margin: auto;
+    line-height: 2.5;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #333;
+}
+#opinion span{
+    font-style: italic;
+    color: #ff4500 ; 
+    text-transform: capitalize;
+    text-shadow: 1px 1px 2px rgba(255, 69, 0, 0.2);
+}
+/* ============================
+    RESPONSIVE BREAKPOINTS
+    ============================ */
+
+/* 1024px and below - Tablets landscape */
+@media (max-width: 1024px) {
+    footer .footer-content {
+        width: 80%;
+        gap: 60px;
+    }
+
+    #opinion p {
+        width: 80%;
+        font-size: 1.2rem;
+    }
+}
+
+/* 770px and below - Tablets portrait */
+@media (max-width: 770px) {
+    footer{
+        width: 97.9%;
+    }
+    footer .footer-content {
+        width: 90%;
+        gap: 40px;
+    }
+
+    footer .footer-section {
+        padding: 10px;
+    }
+
+    #opinion p {
+        width: 90%;
+    }
+}
+
+/* 720px and below */
+@media (max-width: 720px) {
+    #opinion p {
+        padding: 4%;
+    }
+}
+
+/* 600px and below - Large phones */
+@media (max-width: 600px) {
+    footer {
+        padding: 20px 15px;
+        width: 97%;
+
+        margin: auto;
+    }
+
+    footer .footer-content {
+        gap: 20px;
+        grid-template-columns: 1fr;
+    }
+
+    footer .footer-section h3 {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    footer .footer-section p,
+    footer .footer-section ul li {
+        text-align: center;
+        font-size: 13px;
+    }
+
+    footer .footer-bottom {
+        font-size: 12px;
+    }
+    #opinion p {
+        width: 85%;
+        margin: 20px;
+    }
+}
+
+/* 480px and below - Most phones */
+@media (max-width: 480px) {
+    footer{
+        width: 95%;
+    }
+    footer .footer-content {
+        gap: 20px;
+    }
+
+    footer .footer-section h3 {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    footer .footer-section p,
+    footer .footer-section ul li {
+        text-align: center;
+        font-size: 13px;
+    }
+
+    footer .footer-bottom {
+        font-size: 12px;
+    }
+
+    #opinion p {
+        width: 80%;
+        line-height: 2;
+        padding: 5%;
     }
 }
