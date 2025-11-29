@@ -446,14 +446,14 @@ h2 {
     display: flex;
     justify-content: space-around;
 }
-#rank  img {
+#rank img {
     width: 31%;
     height: 350px;
     border-radius: 10px;
     transition: 0.5s;
     border: 1px solid #ffe0b2; 
 }
-#rank  img:hover {
+#rank img:hover {
     scale: 1.05;
     box-shadow: 0 5px 15px rgba(255, 115, 0, 0.4); 
 }
