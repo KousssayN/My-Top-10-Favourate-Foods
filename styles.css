@@ -8,7 +8,7 @@
 /*Start of header Part*/
 
 header {
-    background-color: black;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -809,6 +809,7 @@ footer {
     border-top: 3px solid #ff7300;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border-radius: 20px 20px 0px 0px;
+    
 }
 
 footer .footer-content {
@@ -897,6 +898,9 @@ footer .footer-bottom {
 
 /* 1024px and below - Tablets landscape */
 @media (max-width: 1024px) {
+    footer{
+        width: 100%;
+    }
     footer .footer-content {
         width: 80%;
         gap: 60px;
@@ -911,7 +915,7 @@ footer .footer-bottom {
 /* 770px and below - Tablets portrait */
 @media (max-width: 770px) {
     footer{
-        width: 97.9%;
+        width: 100%;
     }
     footer .footer-content {
         width: 90%;
@@ -938,7 +942,7 @@ footer .footer-bottom {
 @media (max-width: 600px) {
     footer {
         padding: 20px 15px;
-        width: 97%;
+        width: 100%;
 
         margin: auto;
     }
@@ -964,7 +968,7 @@ footer .footer-bottom {
     }
     #opinion p {
         width: 85%;
-        margin: 20px;
+        margin: auto;
     }
 }
 
@@ -973,7 +977,7 @@ footer .footer-bottom {
     footer{
         margin-top: 20px;
 
-        width: 95%;
+        width: 100%;
     }
     footer .footer-content {
         gap: 20px;
@@ -994,10 +998,16 @@ footer .footer-bottom {
         font-size: 12px;
     }
 
-    #opinion p {
-        width: 80%;
-        line-height: 2;
-        padding: 5%;
-        margin: auto;
+        #opinion p {
+
+            width: 80%;
+
+            line-height: 2;
+
+            padding: 5%;
+
+            margin: auto;
+
+        }
+
     }
-}
